@@ -1,0 +1,17 @@
+.hero {
+    min-height: 150px;
+    height: 25vh;
+    z-index: 10;
+
+    @include screen(md) {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

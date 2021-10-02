@@ -1,0 +1,53 @@
+.post-navigator-root {
+    @include screen(md) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.post-navigator {
+    background-color: var(--primary-color);
+    color: var(--primary-bg-color);
+    border-radius: 20px;
+    @include shadow;
+    @include py(1rem);
+    @include px(1rem);
+    @include mx(0.5rem);
+    @include transition;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include screen(md) {
+        width: 33%;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background-color: var(--primary-bg-color);
+        color: var(--primary-color);
+    }
+
+    &__content {
+        flex-grow: 1;
+        &--prev {
+            margin-left: 0.5rem;
+            text-align: left;
+        }
+        &--next {
+            margin-right: 0.5rem;
+            text-align: right;
+        }
+
+        p {
+            @include my(0.25rem);
+        }
+    }
+    &__separator {
+        @include screen(md) {
+            flex-grow: 1;
+        }
+    }
+}
