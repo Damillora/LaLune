@@ -136,12 +136,18 @@ a {
 }
 ul {
   list-style-type: disc;
+  li {
+    margin-left: 2rem;
+  }
   li p {
     @include my(0rem);
   }
 }
 ol {
   list-style-type: decimal;
+  li {
+    margin-left: 2rem;
+  }
 }
 code {
   background-color: var(--primary-bg-color);
